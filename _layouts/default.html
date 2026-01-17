@@ -2,22 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} | {{ site.title }}</title>
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="icon" type="image/png" href="/assets/blackhole_icon.png">
 </head>
 <body>
 
-<nav>
-  <a href="/home/">Home</a>
-  <a href="/research/">Research</a>
-  <a href="/cv/">CV</a>
-  <a href="/contact/">Contact</a>
-</nav>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/home/">{{ site.title }}</a>
 
-<main>
+    <nav class="nav">
+      <a class="nav-link" href="/home/">Home</a>
+      <a class="nav-link" href="/research/">Research</a>
+      <a class="nav-link" href="/cv/">CV</a>
+      <a class="nav-link" href="/contact/">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
   {{ content }}
 </main>
+
+<footer class="site-footer">
+  <div class="container">
+    <small>{{ site.time | date: "%Y" }} {{ site.title }}</small>
+  </div>
+</footer>
 
 </body>
 </html>
