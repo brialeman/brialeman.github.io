@@ -4,6 +4,120 @@ title: Home
 permalink: /
 ---
 
-<script>
-  window.location.replace("/home/");
-</script>
+
+<section id="home" class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <h1>Bri Aleman</h1>
+      <p>Computational Astrophysics Student</p>
+    </div>
+
+    <div class="hero-image">
+      <img
+        src="{{ '/assets/images/me.jpg' | relative_url }}"
+        alt="me">
+    </div>
+  </div>
+</section>
+
+
+<section id="about" class="section">
+  <div class="container">
+    <h2>About Me</h2>
+    <div class="grid">
+      <div class="col-7">
+        <p>
+          Welcome to my website! I am interested in using numerical methods and general-relativistic magnetohydrodynamic simulations
+          to understand the properties of black holes, neutron stars, and their mergers. I have two dogs and a cat, and I am a proud
+          advocate for diversity and accessibility in STEM.
+        </p>
+      </div>
+      <div class="col-5">
+        <div class="card">
+          <h3>Affiliation</h3>
+          <p>Department of Physics and Astronomy, CSU Northridge</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <div class="container">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="item">
+        <div class="meta">May 2025 – Present</div>
+        <strong>Research Assistant - NumRel@PSU</strong><br>
+        <span class="meta">Pennsylvania State University</span>
+      </div>
+      <div class="item">
+        <div class="meta">June 2024 – Present</div>
+        <strong>Research Assistant - LIGO</strong><br>
+        <span class="meta">California Institute of Technology</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="research" class="section">
+  <div class="container">
+    <h2>Research</h2>
+    <div class="grid">
+      <div class="card" style="grid-column: span 6;">
+        <h3>Phase-Transition-Induced Collapse of Neutron Stars</h3>
+        <p>
+          I study how neutron stars collapse and emit gravitational waves using large-scale
+          numerical simulations, and analyze the resulting signals to understand the underlying physics.
+        </p>
+        <div class="pills">
+          <span class="pill">GRMHD</span><span class="pill">EOS</span><span class="pill">Num. Rel.</span>
+        </div>
+      </div>
+
+      <div class="card" style="grid-column: span 6;">
+        <h3>OmegaNeuron: Applying GravitySpy Similarity Methods to the Search for LIGO Glitch Witnesses</h3>
+        <p>
+          I work on understanding and identifying transient noise in LIGO data, using data analysis and
+          machine-learning tools to improve how these noise sources are found.
+        </p>
+        <div class="pills">
+          <span class="pill">Detector Characterization</span><span class="pill">Glitch Detection</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cv" class="section">
+  <div class="container">
+    <h2>CV</h2>
+    <iframe
+      src="{{ '/assets/bri_CV.pdf' | relative_url }}"
+      width="80%"
+      height="600px"
+      style="border: none;"
+      title="Bri Aleman CV">
+    </iframe>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Contact</h2>
+
+    <div class="contact-icons">
+      <a href="https://github.com/brialeman">
+        <img src="{{ '/assets/images/github.svg' | relative_url }}" alt="GitHub">
+      </a>
+
+      <a href="https://linkedin.com/in/bri-aleman" aria-label="LinkedIn">
+        <img src="{{ '/assets/images/linkedin.svg' | relative_url }}" alt="LinkedIn">
+      </a>
+
+      <a href="mailto:baleman003@gmail.com" aria-label="Email">
+        <img src="{{ '/assets/images/email.svg' | relative_url }}" alt="Email">
+      </a>
+    </div>
+  </div>
+</section>
