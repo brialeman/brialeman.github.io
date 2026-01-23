@@ -13,7 +13,7 @@ html, body { margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   color: var(--text);
   background: var(--bg);
   line-height: 1.55;
@@ -43,10 +43,12 @@ body {
 }
 
 .brand {
-  font-weight: 650;
-  text-decoration: none;
-  color: var(--text);
+  font-family: "Pulstar", cursive;
+  font-size: 1.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
   white-space: nowrap;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.908);
 }
 
 .nav { display: flex; gap: 0.9rem; flex-wrap: wrap; }
