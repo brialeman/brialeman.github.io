@@ -25,13 +25,21 @@ body {
   padding: 0 1.25rem;
 }
 
-.site-header {
-  position: sticky;
+.site-header{
+  position: fixed;
   top: 0;
-  background: #0d1d2d;
-  backdrop-filter: blur(8px);
+  left: 0;
+  width: 100%;
+
+  z-index: 1000;         
+  background: rgba(7, 14, 33, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--border);
-  z-index: 10;
+}
+
+.site-header a.brand {
+  text-decoration: none;
 }
 
 .header-inner {
@@ -43,12 +51,13 @@ body {
 }
 
 .brand {
-  font-family: "Pulstar", cursive;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   font-size: 1.6rem;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   white-space: nowrap;
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.908);
+  color: #e3bfdc;
 }
 
 .nav { display: flex; gap: 0.9rem; flex-wrap: wrap; }
@@ -215,6 +224,67 @@ section { scroll-margin-top: 80px; }
   display: block;
   margin: 0 auto;
   max-width: 900px;
+}
+
+.bg-image{
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image: url("../images/milkyway_background_uruguay.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  filter: brightness(0.75) contrast(1.05);
+  transform: scale(1.02); 
+}
+
+/* translucent overlay */
+.bg-glass{
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  background: rgba(10, 15, 25, 0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+main{
+  padding-top: 90px; /* adjust if header height differs */
+}
+
+main, .site-footer{
+  position: relative;
+  z-index: 2;
+}
+
+main a,
+main a:visited {
+  color: #c453ad;
+}
+
+main a:hover {
+  color: #ffffff;
+}
+
+body{
+  opacity: 0;
+  animation: bodyFade 700ms ease-out forwards;
+}
+
+@keyframes bodyFade{
+  to{ opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  body{
+    animation: none;
+    opacity: 1;
+  }
 }
 
 .contact-icons {
